@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "ansible-galaxy-sync"
   gem.homepage = "http://github.com/colstrom/ansible-galaxy-sync"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Commandline tool to sync Ansible Galaxy Metadata}
+  gem.description = %Q{Changing metadata in a Galaxy Role requires re-importing the role. This is a tool to simplify that process.}
   gem.email = "chris@olstrom.com"
   gem.authors = ["Chris Olstrom"]
   # dependencies defined in Gemfile
