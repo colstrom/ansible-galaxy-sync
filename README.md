@@ -1,9 +1,17 @@
 = ansible-galaxy-sync
 
-Description goes here.
+Commandline tool to re-import Galaxy roles.
+
+Installation
+------------
+`gem install ansible-galaxy-sync`
+
+Usage
+-----
+`ansible-galaxy-sync rolename(s)`
 
 == Contributing to ansible-galaxy-sync
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
