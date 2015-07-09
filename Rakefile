@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Changing metadata in a Galaxy Role requires re-importing the role. This is a tool to simplify that process.}
   gem.email = "chris@olstrom.com"
   gem.authors = ["Chris Olstrom"]
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
