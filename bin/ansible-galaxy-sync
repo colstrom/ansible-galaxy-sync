@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'ansible_galaxy'
+require 'terminal-announce'
+
+config_file = File.expand_path '~/.config/ansible-galaxy-sync.yaml'
+begin
+  config = YAML.load_file config_file
+rescue Errno::ENOENT
+  Announce.failure "Unable to find configuration at #{config_file}"
+  abort
+end
+
+roles = if ARGV.empty?
+  AnsibleGalaxy::Me.new(config).roles.map { |role| role['name'] }
+else
+  ARGV
+end
+AnsibleGalaxy::Roles::Private.new(config).refresh roles
+
